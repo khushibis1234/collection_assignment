@@ -1,0 +1,75 @@
+hashmap :userdefine class 
+----------------------------------------------------------------
+linkedhashmap :
+a)heterogenous data stored 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    LinkedHashMap<Integer,String>lhs=new LinkedHashMap<>();
+    lhs.put(1,"hello");
+    lhs.put(2,"45");
+    lhs.put(3,"4.6");
+    System.out.println(lhs);
+  }
+}
+b)homogenous data stored 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    LinkedHashMap<Integer,String>lhs=new LinkedHashMap<>();
+    lhs.put(1,"55");
+    lhs.put(2,"54");
+    lhs.put(3,"50");
+    System.out.println(lhs);
+  }
+}
+c)single key and value and entry set
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    LinkedHashMap<Integer,String>lhs=new LinkedHashMap<>();
+    lhs.put(1,"hello");
+    lhs.put(2,"bye");
+    lhs.put(3,"tata");
+    System.out.println(lhs.values());
+  System.out.println(lhs.keySet());
+   System.out.println(lhs.entrySet());
+  }
+}
+d)for each loop 
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    LinkedHashMap<Integer, String> lhs = new LinkedHashMap<>();
+    lhs.put(1, "hello");
+    lhs.put(2, "bye");
+    lhs.put(3, "tata");
+    for (Map.Entry hm : lhs.entrySet()) {
+      System.out.println(hm.getKey() + " "+hm.getValue());
+    }
+  }
+}
+e)hierarchy implementation 
+f)userdefine wrapper class 
+import java.util.*;
+class A{
+  int a;
+  A(int a){
+    this.a=a;
+  }
+}
+public class Main{
+  public static void main(String[] args){
+    A P=new A(34);
+    A k=new A(45);
+    LinkedHashMap<String,A> lhm=new LinkedHashMap<>();
+    lhm.put("hello",P);
+    lhm.put("hii",k);
+    for(Map.Entry<String,A>hm:lhm.entrySet()){
+      String s=hm.getKey();
+      A l=hm.getValue();
+      System.out.println(s+""+l.a);
+    }
+  }
+}
+--------------------------------------------------------------
