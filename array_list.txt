@@ -1,0 +1,143 @@
+array list :
+all wrapper class data stored 5 element print 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    ArrayList<Object>list=new ArrayList<>();
+    list.add(Integer.valueOf(10));
+    list.add(Character.valueOf('c'));
+    list.add(String.valueOf("khushi"));
+    list.add(Boolean.valueOf(true));
+    list.add(Double.valueOf(5.55));
+
+    for(Object element:list){
+      System.out.println(element);
+    }
+
+  }
+}
+------------------------------------------------------------------------
+even number find in arraylist 
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> list = new ArrayList<>();
+    list.add(45);
+    list.add(30);
+    list.add(46);
+    list.add(30);
+    ArrayList<Integer> evenNumber = new ArrayList<>();
+    for (Integer num : list) {
+      if (num % 2 == 0) {
+        System.out.println(num);
+      }
+    }
+  }
+}
+------------------------------------------------------------------------
+odd number find in arraylist 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    ArrayList<Integer> list=new ArrayList<>();
+    list.add(45);
+    list.add(21);
+    list.add(29);
+    list.add(41);
+    list.add(30);
+    ArrayList<Integer> OddNumber=new ArrayList<>();
+    for(Integer obj:list){
+      if(obj%2!=0){
+        System.out.println(obj);
+      }
+    }
+  }
+}
+------------------------------------------------------------------------
+Armstrong number
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    ArrayList<Integer> list=new ArrayList<>();
+    list.add(153);
+    list.add(152);
+    list.add(190);
+    list.add(123);
+    list.add(151);
+    list.add(163);
+    System.out.println("armstrong in the list");
+    for(Integer num:list){
+     if(Armstrong(num)){
+         System.out.println(num);
+     }
+    }
+  }
+  public static boolean Armstrong(int number) {
+    int originalNumber = number;
+    int sum=0;
+    int digits = String.valueOf(number).length(); 
+    
+    while (number > 0) {
+      int digit = number % 10;
+      sum += Math.pow(digit, digits); 
+      number /= 10;
+   }
+    
+    return sum == originalNumber;
+  }
+}
+
+------------------------------------------------------------------------
+palindrome 
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<>();
+    numbers.add(121);
+    numbers.add(123);
+    numbers.add(131);
+    numbers.add(145);
+    numbers.add(12321);
+   System.out.println("Palindrome numbers in the list:");
+    for (Integer num : numbers) {
+      if (isPalindrome(num)) {
+        System.out.println(num);
+      }
+    }
+  }
+  public static boolean isPalindrome(int number) {
+    int originalNumber = number;
+    int reversedNumber = 0;
+     while (number > 0) {
+      int digit = number % 10;
+      reversedNumber = reversedNumber * 10 + digit;
+      number /= 10;
+    }
+    
+    return originalNumber == reversedNumber;
+  }
+}
+
+------------------------------------------------------------------------
+find duplicate and count in arraylist 
+------------------------------------------------------------------------
+even number count in arraylist 
+------------------------------------------------------------------------
+neon number 
+------------------------------------------------------------------------
+factorial of number 
+------------------------------------------------------------------------
+find unique number in arraylist 
+------------------------------------------------------------------------
+string :
+every object :vowel and consoant (count)
+------------------------------------------------------------------------
+two array common element 
+------------------------------------------------------------------------
+sum of all arraylist 
+------------------------------------------------------------------------
+maximum element 
+------------------------------------------------------------------------
+minimum element 
+------------------------------------------------------------------------
+
