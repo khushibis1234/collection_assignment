@@ -1,0 +1,27 @@
+array list :
+all wrapper class data stored 5 element print
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Stack<Object> stack=new Stack<>();
+        stack.push(Integer.valueOf(10));
+        stack.push(Double.valueOf(0.223));
+        stack.push(Character.valueOf('s'));
+        stack.push(Boolean.valueOf("true"));
+        stack.push(Float.valueOf(0.3f));
+        System.out.println("elements in the stack");
+        for(Object element:stack){
+            System.out.println(element);
+        }
+
+    }
+} 
+------------------------------------------------------------------------
+
+
+
+
+
+
+
