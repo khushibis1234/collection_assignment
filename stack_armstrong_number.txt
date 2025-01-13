@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 153;
+        if (isArmstrong(number)) {
+            System.out.println(number + "is an armstrong number");
+        } else {
+            System.out.println(number + "not a armstrong number");
+        }
+    }
+
+    public static boolean isArmstrong(int number) {
+        Stack<Integer> stack = new Stack<>();
+        int temp = number;
+        int numDigits = 0;
+        int digit = temp % 10;
+        stack.push(digit);
+        temp /= 10;
+        numDigits++;
+
+        int sum = 0;
+        while (!stack.isEmpty()) {
+            digit = stack.pop();
+            sum += Math.pow(digit, numDigits);
+        }
+
+        return sum == number;
+    }
+}
